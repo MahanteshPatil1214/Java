@@ -6,9 +6,10 @@ import java.util.List;
 
 public class DeliveryService {
     public void sendNotification(List<String> types){
-        List<Notification> notifications = NotificationFactory.sendNotification(types);
-        for(Notification notification : notifications) {
-            notification.send();
-        }
+        NotificationFactory factory = new SmsFactory();
+        Notification notification = factory.createNotification();
+        Template template = factory.createTemplate();
+        notification.send();
+        template.format();
     }
 }
