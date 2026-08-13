@@ -2,7 +2,11 @@ package LLD.BuilderDesignPattern;
 
 public class EmailService {
     public void sendWelcomeEmail() {
-        User user = new User("Mahantesh", 21, "patilmahantesh642@gmail.com");
+        UserBuilder userBuilder = new UserBuilder();
+        userBuilder.setName("Mahantesh")
+                .setEmail("mahanteshpatil642@gmail.com")
+                .setAge(21);
+        User user = new User(userBuilder);
         System.out.println("Welcome email sent to -> " + user);
     }
 }
