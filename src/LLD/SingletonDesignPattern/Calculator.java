@@ -14,8 +14,8 @@ public class Calculator {
         return a*b;
     }
 
-//    Lazy initialization Approach
-    public static Calculator getInstance(){
+//    Synchronized Approach
+    public synchronized static Calculator getInstance(){
         if(obj == null) {
             obj = new Calculator();
         }
