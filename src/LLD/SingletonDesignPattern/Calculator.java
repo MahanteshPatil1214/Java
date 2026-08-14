@@ -14,10 +14,14 @@ public class Calculator {
         return a*b;
     }
 
-//    Synchronized Approach
-    public synchronized static Calculator getInstance(){
+//    Double-Checked Locking Approach
+    public  static Calculator getInstance(){
         if(obj == null) {
-            obj = new Calculator();
+            synchronized (Calculator.class) {
+                if (obj == null) {
+                    obj = new Calculator();
+                }
+            }
         }
         return obj;
 
