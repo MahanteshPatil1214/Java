@@ -2,10 +2,11 @@ package LLD.SingletonDesignPattern;
 
 public class Main {
     public static void main(String[] args) {
-        Thread t1 = new Thread(Calculator::getInstance);
-        Thread t2 = new Thread(Calculator::getInstance);
-        t1.start();
-        t2.start();
-
+        Calculator cal = Calculator.INSTANCE;
+        cal.setValues(10,20);
+        System.out.println("Sum:" + cal.sum());
+        Calculator cal2 = Calculator.INSTANCE;
+        cal2.setValues(1,20);
+        System.out.println("Sum:" + cal2.sum());
     }
 }

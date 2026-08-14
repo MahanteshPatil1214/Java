@@ -1,29 +1,22 @@
 package LLD.SingletonDesignPattern;
 
-public class Calculator {
+//Enum Approach
+public enum Calculator {
+    INSTANCE;
+
     int a;
     int b;
 
-    private static Calculator obj ;
+    public void setValues(int a,int b ){
+        this.a=a;
+        this.b=b;
+    }
 
-    private Calculator() {
+    Calculator() {
         System.out.println("Instance created");
     }
 
     public int sum(){
         return a*b;
-    }
-
-//    Double-Checked Locking Approach
-    public  static Calculator getInstance(){
-        if(obj == null) {
-            synchronized (Calculator.class) {
-                if (obj == null) {
-                    obj = new Calculator();
-                }
-            }
-        }
-        return obj;
-
     }
 }
