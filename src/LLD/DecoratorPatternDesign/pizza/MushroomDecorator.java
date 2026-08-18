@@ -1,6 +1,6 @@
-package LLD.DecoratorPatternDesign;
+package LLD.DecoratorPatternDesign.pizza;
 
-public class MushroomDecorator extends PizzaDecorator{
+public class MushroomDecorator extends PizzaDecorator {
     public MushroomDecorator(Pizza pizza) {
         super(pizza);
     }

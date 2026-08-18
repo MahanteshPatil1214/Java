@@ -1,4 +1,4 @@
-package LLD.DecoratorPatternDesign;
+package LLD.DecoratorPatternDesign.pizza;
 
 public class CheeseDecorator extends PizzaDecorator {
      public CheeseDecorator(Pizza pizza) {

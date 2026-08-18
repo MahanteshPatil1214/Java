@@ -1,4 +1,4 @@
-package LLD.DecoratorPatternDesign;
+package LLD.DecoratorPatternDesign.pizza;
 
 public class Main {
     public static void main(String[] args) {

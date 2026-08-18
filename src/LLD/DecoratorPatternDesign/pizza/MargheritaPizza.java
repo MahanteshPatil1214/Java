@@ -1,6 +1,6 @@
-package LLD.DecoratorPatternDesign;
+package LLD.DecoratorPatternDesign.pizza;
 
-public class MargheritaPizza implements Pizza{
+public class MargheritaPizza implements Pizza {
     @Override
     public String getDescription() {
         return "Margherita Pizza";
