@@ -1,7 +1,22 @@
 package LLD.StrategyDesignPattern;
 
-public interface Notification {
-    void send();
-    void encrypt();
-    void compress();
+public abstract class Notification {
+    EncryptionStrategy encryptionstrategy;
+    CompressionStrategy compressionStrategy;
+
+    public Notification(EncryptionStrategy encryptionstrategy, CompressionStrategy compressionStrategy) {
+        this.encryptionstrategy = encryptionstrategy;
+        this.compressionStrategy = compressionStrategy;
+    }
+
+    abstract void send();
+    void encrypt(){
+        encryptionstrategy.encrypt();
+    }
+
+    void compress(){
+        compressionStrategy.compress();
+    }
 }
+
+
