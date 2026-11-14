@@ -1,4 +1,4 @@
-package therytopics;
+package theorytopics;
 
 public class ConstructorOverloading {
     int var1;
