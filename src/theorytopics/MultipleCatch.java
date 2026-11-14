@@ -18,5 +18,8 @@ public class MultipleCatch {
         catch (Exception e){
             System.out.println("3rd block = Exception");
         }
+        finally {
+            System.out.println("Always execute with irrespective of handling exceptions");
+        }
     }
 }
