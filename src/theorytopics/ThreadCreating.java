@@ -1,12 +1,12 @@
 package theorytopics;
 
-public class ThreadCreating extends Thread {
+public class ThreadCreating implements Runnable{
     public void run(){
         System.out.println("Started");
     }
 
     public static void main(String[] args) {
-        ThreadCreating a = new ThreadCreating();
+        Thread a = new Thread(new ThreadCreating());
         a.start();
     }
 }
